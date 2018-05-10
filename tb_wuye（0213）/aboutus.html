@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/global.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--[if IE 7]>
+        <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+        <![endif]-->
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/about_us.css">
+	<link rel="stylesheet" href="css/news_center.css"/>
+	<link rel="stylesheet" href="css/projects_services.css"/>
+	<link rel="stylesheet" href="css/projects_services_ver2.css"/>
+
+	<!-- stylesheet for demo and examples -->
+	<link rel="stylesheet" href="css/mCustomScrollbar_example.css">
+	<!-- custom scrollbar stylesheet -->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<script src="js/index.js"></script>
+	<style>
+.swiper-container {
+  width: 100%;
+  height: 80em;
+}
+
+.swiper-slide {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-container-v {
+  background: #fff;
+}
+
+.swiper-container-h {
+  height: 45em;
+}
+</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+.fancybox-custom .fancybox-skin {
+  box-shadow: 0 0 50px #222;
+}
+</style>
+	<title>项目与服务</title>
+	</head>
+	<body>
+<div class="mains">
+      <div class="nav nav-aboutus" style="position:fixed; z-index:1000;" >
+    <div class="nav-container">
+          <div class="logo"> <img src="images/logo.png"> </div>
+          <ul class="nav_text clearfix">
+        <li class="list1"> <a href="index.html">首页</a> </li>
+        <li class="list1"> <a href="aboutus.html">关于我们</a>
+              <ol id="o1">
+            <li><a href="javascript:;">公司简介</a></li>
+            <li><a href="javascript:;">企业资质</a></li>
+            <li><a href="#" id="btn">组织机构</a></li>
+          </ol>
+            </li>
+        <li class="list1"> <a href="news_center.html">新闻中心</a>
+              <ol id="o1">
+            <li><a href="news_center.html#xinwen">公司新闻</a></li>
+            <li><a href="news_center.html#zixun">行业资讯</a></li>
+            <li><a href="news_center.html#qikan">同博期刊</a></li>
+          </ol>
+            </li>
+        <li class="list1"> <a href="property.html">项目与服务</a>
+              <ol id="o1">
+            <li><a href="property.html">物业</a></li>
+            <li><a href="javascript:;">餐饮</a></li>
+            
+            <li><a href="javascript:;">幼教</a></li>
+            <li><a href="javascript:;">医疗</a></li>
+          </ol>
+            </li>
+        <li class="list1"> <a href="recruit.html">人才招聘</a>
+              <ol id="o1">
+            <li><a href="javascript:;">人才理念</a></li>
+            <li><a href="javascript:;">招聘信息</a></li>
+          </ol>
+            </li>
+        <li class="list1"> <a href="contact_us.html">联系我们</a> </li>
+      </ul>
+        </div>
+  </div>
+      <div class="banner aboutus-banner"> </div>
+    </div>
+<div class="about_us">
+      <div class="main"> 
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-v">
+          <div class="swiper-wrapper">
+        <div class="swiper-slide aboutus-wrap-1">
+              <div class="container">
+            <h3 class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">公司简介</h3>
+            <div class="content light content-1 aboutus-cont ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.1s" swiper-animate-delay="0.6s">
+                  <p>　　武汉同博物业管理有限公司成立于2005年8月1日，位于武汉市洪山区邮科院路88号，2013年获物业服务企业二级资质证书。2015年，同博科技有限公司追加注资，此时，同博物业管理有限公司注资达500万元，管理服务项目十余个，包括邮科院家属区、烽火科技大厦、光通信产业大楼、关东工业园、烽火研发园等。<br>
+                <br>
+                同博物业作为专业的物业服务提供商，为地产业主、投资者及承租人、使用人提供综合服务，包括物业/设施及项目管理、专业顾问咨询服务、主业配套增值服务等。在管项目涉及工业/科技园、学校、生产厂房、写字楼、住宅、学校、医院等多种业态，服务总面积达70多万平方米。曾多次参与所管项目重要参观及会议接待工作，包括习近平、温家宝等国家领导人视察和全国政协委员会议召开。<br>
+                <br>
+                近十年来，同博物业汇聚了大量高级专业人才，脚踏实地依托已有项目平台，在百舸争流的物业市场中稳步前进。发展至今，已成长为拥有良好社会声誉的现代管理企业，成为全国后勤协会常务理事单位、武汉市物业协会常务理事单位。 </p>
+                </div>
+          </div>
+            </div>
+        <div class="swiper-slide aboutus-wrap-2">
+              <div class="aboutus-title-2">
+            <h3 class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s">综合型物业</h3>
+          </div>
+              <div class="comprehensive-icon"> 
+                <div class="icon1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s"><a class="fancybox fancybox-effects-c" href="images/basic/basic01.jpg" data-fancybox-group="gallery" title="客务服务——大堂"><span>基础服务</span></a></div>
+                <a class="fancybox fancybox-effects-c" href="images/basic/basic02.jpg" data-fancybox-group="gallery" title="客务服务——虹信大堂"></a> <a class="fancybox fancybox-effects-c" href="images/basic/basic03.jpg" data-fancybox-group="gallery" title="客务服务——一号楼大堂"></a> <a class="fancybox fancybox-effects-c" href="images/basic/order01.jpg" data-fancybox-group="gallery" title="秩维服务——车辆迎宾"></a> <a class="fancybox fancybox-effects-c" href="images/basic/order02.jpg" data-fancybox-group="gallery" title="秩维服务——车辆迎宾"></a> <a class="fancybox fancybox-effects-c" href="images/basic/order03.jpg" data-fancybox-group="gallery" title="秩维服务——工程部"></a> <a class="fancybox fancybox-effects-c" href="images/basic/order04.jpg" data-fancybox-group="gallery" title="秩维服务——一号楼监控室"></a> <a class="fancybox fancybox-effects-c" href="images/basic/engin01.jpg" data-fancybox-group="gallery" title="工程服务——6号楼变电站"></a> <a class="fancybox fancybox-effects-c" href="images/basic/engin02.jpg" data-fancybox-group="gallery" title="工程服务——工程部"></a> <a class="fancybox fancybox-effects-c" href="images/basic/engin03.jpg" data-fancybox-group="gallery" title="工程服务——工程部"></a> <a class="fancybox fancybox-effects-c" href="images/basic/environ01.jpg" data-fancybox-group="gallery" title="环境服务——保洁人员"></a> <a class="fancybox fancybox-effects-c" href="images/basic/environ02.jpg" data-fancybox-group="gallery" title="环境服务——保洁人员"></a>
+            <div class="icon2 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.6s"><span>升级服务</span></div>
+            
+                <div class="icon3 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.9s"><span><a href="feature_service.html">特色服务</a></span></div>
+                 </div>
+              <div class="text ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="1.2s"> 　　　武汉同博物业管理有限公司成立于2005年8月1日，位于武汉市洪山区邮科院路88号，2013年获物业服务企业二级资质证书。2015年，同博科技有限公司追加注资，此时，同博物业管理有限公司注资达500万元。 </div>
+            </div>
+        <div class="swiper-slide  aboutus-wrap-6">
+              <div class="aboutus-title-6">
+            <h3 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0s">荣誉资质</h3>
+          </div>
+              <div class="honor-tab ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.6s" swiper-animate-delay="0s"> <a id="tab1" style="cursor:pointer">二级物业</a> <a id="tab2" style="cursor:pointer">奖牌</a> </div>
+              <div class="swiper-container swiper-container-honor ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s" style="width:100%;height:500px">
+            <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                <div class="swiper-container swiper-container-h">
+                      <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                          <div class="honor-wrap">
+                        <div class="honor-img">  <a class="fancybox fancybox-effects-c" href="images/honor02.jpg"><img src="images/honor02.jpg" alt="" width="500"></a> </div>
+                        <div class="content light content-1 honor-cont-1">
+                              <div class="title">同博物业获2015年度物业管理优秀企业称号</div>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;武汉同博物业管理有限公司成立于2005年8月1日，位于武汉市洪山区邮科院路88号，2013年获物业服务企业二级资质证书。2015年，同博科技有限公司追加注资，此时，同博物业管理有限公司注资达500万元，管理服务项目十余个，包括邮科院家属区、烽火科技大厦、光通信产业大楼、关东工业园、烽火研发园等。<br>
+                              <br>
+                              同博物业作为专业的物业服务提供商，为地产业主、投资者及承租人、使用人提供综合服务，包括物业/设施及项目管理、专业顾问咨询服务、主业配套增值服务等。在管项目涉及工业/科技园、学校、生产厂房、写字楼、住宅、学校、医院等多种业态，服务总面积达70多万平方米。曾多次参与所管项目重要参观及会议接待工作，包括习近平、温家宝等国家领导人视察和全国政协委员会议召开。<br>
+                              <br>
+                              近十年来，同博物业汇聚了大量高级专业人才，脚踏实地依托已有项目平台，在百舸争流的物业市场中稳步前进。发展至今，已成长为拥有良好社会声誉的现代管理企业，成为全国后勤协会常务理事单位、武汉市物业协会常务理事单位。 </div>
+                      </div>
+                        </div>
+                    <div class="swiper-slide">
+                          <div class="honor-wrap">
+                        <div class="honor-img"><a class="fancybox fancybox-effects-c" href="images/honor03.png"> <img src="images/honor03.png" alt="" width="500"></a> </div>
+                        <div class="content light content-1 honor-cont-1">
+                              <div class="title">武汉同博物业管理有限公司喜获2015年武汉市物业服务行业   “最具成长性企业”荣誉</div>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1月28日下午，武汉市物业管理协会2015年度总结表彰会暨 2016年会员代表大会在湖北省图书馆隆重召开。武汉市住房保障和房屋管理局、武汉市民政局、武汉市各区房管局分管局领导及行业协会负责人出席会议。来自全市会员企业代表近600人参加会议。<br>  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;会上，对荣获“十佳”的企业予以表彰。 此次“十佳”奖项的评选，历时三个月，面向全市物业企业，经过申报、评估、筛选、晋级，实地考察等诸多环节，经过激烈角逐，在全武汉物业管理企业中晋级十佳。<br>  <br>
+这些获奖的优秀企业、项目以及个人充分展现了本市物业服务行业在改&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;善人居环境、强化城市管理及建立和谐社会中所发挥的积极作用，弘扬了行业发展中的正能量和新风尚，展示了物业服务行业的良好社会形象。武汉同博物业管理有限公司榜上有名，荣获“最具成长性企业”殊荣。<br>  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;武汉同博物业管理有限公司成立于2005年，2013年获得国家二级物业管理企业资质，现为中国物业管理协会会员单位，武汉市物业管理协会常务理事单位，东湖开发区物业协会副主任单位。服务区域主要分部在武汉市东湖新技术开发区、洪山区和江夏经济开发区，，管理业态丰富，涵盖住宅、写字楼、工业园区、医院学校等。在近八年的时间里，同博物业内修企业灵魂外树企业形象，不断创新服务，在光谷区域已建立一定知名度和影响力。<br>  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同博物业总经理周芳说：有行动，有坚持，就会有收获。前进的路还很长，同博物业人必须脚踏实地，风雨兼程，做大做强，超越自我，永无止境。<br>  <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016年，同博物业继续坚持“诚信、专注、创新、卓越”的服务理念，全面提升服务管理水平，依靠现有实力，不断增强企业的核心竞争力，积极探索物业+互联网+创新之路，打造智慧服务模式，为客户带来崭新的物业服务体验和创造无限美好生活，走出一条以竞争求生存、以合作谋双赢、以创新促发展之路，推动行业向前发展。
+
+ </div>
+                      </div>
+                        </div>
+                    <div class="swiper-slide">
+                    <div class="honor-wrap">
+                        <div class="honor-img"> <a class="fancybox fancybox-effects-c" href="images/honor04.jpg"><img src="images/honor04.jpg" alt="" width="500"></a> </div>
+                        <div class="content light content-1 honor-cont-1">
+                              <div class="title">祝贺我院获得“武汉市卫生先进单位”称号</div>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;日前, 武汉邮电科学研究院被武汉市爱卫会授予“武汉市卫生先进单位”荣誉称号。爱国卫生运动是一项综合性工作，涉及环境卫生管理、食品安全卫生、绿化美化、健康教育、病媒防治等多项内容。我院的爱国卫生运动一直在邮科院爱国卫生委员会的指导下稳步开展，同博物业是此项工作的具体落实单位。<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同博物业一直高度重视爱国卫生工作，认真贯彻落实湖北省、武汉市卫生部门关于爱国卫生工作的各项要求，不断加大对爱国卫生工作的投入。一是加强领导，落实责任，同博物业紧紧围绕院关于《爱国卫生工作责任制》的要求，成立爱国卫生工作小组，明确责任，层层落实；二是健全制度，落实措施，建立了不定期的卫生检查制度，确保卫生工作落到实处；三是扫除“四害”，净化环境，除“四害”是爱国卫生工作的一项重要内容，对于推动卫生防疫工作具有重要意义，我们按不同季节抓好扫除“四害”工作，达到了净化环境的目的；四是广泛宣传，营造良好的爱国卫生氛围，通过宣传栏、征订健康手册等多种宣传形式，对爱国卫生进行了深入而广泛的宣传。<br><br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近年来，在院领导和相关部门的支持下，院兄弟单位的配合下，同博物业积极改善各类基础设施条件，邮科院环境卫生有了显著改观，居民和职工的文明卫生意识普遍得到加强，文明创建工作也得到全面巩固和提高，多次得到洪山区和关山街卫生部门的高度评价和充分肯定。爱国卫生运动是一个系统长期工作，前行之路还很长，今年同博物业将大力加强院绿化改建投入，进一步加大卫生整治力度，美化环境，为我院的爱国卫生工作做出更大的成绩。<br><br> 
+                                                <span style="display:block;float:right">同博公司</span>
+     <br><br>                                             <span style="display:block;float:right">毕哲人</span>
+
+ </div>
+                      </div>             
+                    
+                    </div>
+                    <div class="swiper-slide">
+                                       <div class="honor-wrap">
+                        <div class="content light content-2 honor-cont-3">
+                        <div class="qualification"><a class="fancybox fancybox-effects-c" href="images/qualification01.jpg"><img src="images/qualification01.jpg" height="250" alt=""/></a></div>
+                               <div class="qualification"><a class="fancybox fancybox-effects-c" href="images/qualification02.jpg"><img src="images/qualification02.jpg" height="250" alt=""/></a></div>
+                               <div class="qualification"><a class="fancybox fancybox-effects-c" href="images/qualification03.jpg"><img src="images/qualification03.jpg" height="250" alt=""/></a></div>
+                               <div class="qualification"><a class="fancybox fancybox-effects-c" href="images/qualification04.jpg"><img src="images/qualification04.jpg" height="250" alt=""/></a></div>
+                               <div class="qualification"><a class="fancybox fancybox-effects-c" href="images/qualification05.jpg"><img src="images/qualification05.jpg" height="250" alt=""/></a></div>
+                               <div class="qualification"><a class="fancybox fancybox-effects-c" href="images/qualification06.jpg"><img src="images/qualification06.jpg" height="250" alt=""/></a></div>
+                             
+ </div>
+                      </div> 
+                    
+                    </div>
+                  </div>
+                      <div class="swiper-pagination swiper-pagination-h" style="margin-bottom: 9em;"></div>
+                    </div>
+              </div>
+                  <div class="swiper-slide">
+                <div class="medal-wrap">
+                      <div class="content light content-2 honor-cont-2"> 
+                      <a class="fancybox fancybox-effects-c" href="images/medal/medal01.jpg"><img src="images/medal/medal01.jpg" height="250" alt=""/></a>
+                       <a class="fancybox fancybox-effects-c" href="images/medal/medal02.jpg"><img src="images/medal/medal02.jpg" height="250" alt=""/></a>
+                        <a class="fancybox fancybox-effects-c" href="images/medal/medal03.jpg"><img src="images/medal/medal03.jpg" height="250" alt=""/> </a>
+                        <a class="fancybox fancybox-effects-c" href="images/medal/medal04.jpg"><img src="images/medal/medal04.jpg" height="250" alt=""/></a> 
+                        <a class="fancybox fancybox-effects-c" href="images/medal/medal05.jpg"><img src="images/medal/medal05.jpg" height="250" alt=""/></a>
+                                                <a class="fancybox fancybox-effects-c" href="images/medal/medal06.jpg"><img src="images/medal/medal06.jpg" height="250" alt=""/></a>
+                                                                        <a class="fancybox fancybox-effects-c" href="images/medal/medal07.jpg"><img src="images/medal/medal07.jpg" height="250" alt=""/></a>
+                                                                                                <a class="fancybox fancybox-effects-c" href="images/medal/medal08.jpg"><img src="images/medal/medal08.jpg" height="250" alt=""/></a>
+                                                                                                                                              <a class="fancybox fancybox-effects-c" href="images/medal/medal09.jpg"><img src="images/medal/medal09.jpg" height="250" alt=""/></a>
+                                                                                                                                                                                            <a class="fancybox fancybox-effects-c" href="images/medal/medal10.jpg"><img src="images/medal/medal10.jpg" height="250" alt=""/></a>
+                                                                                                                                                                                                                                          <a class="fancybox fancybox-effects-c" href="images/medal/medal11.jpg"><img src="images/medal/medal11.jpg" height="250" alt=""/></a>                                                                                                        <a class="fancybox fancybox-effects-c" href="images/medal/medal12.jpg"><img src="images/medal/medal12.jpg" height="250" alt=""/></a>
+    <a class="fancybox fancybox-effects-c" href="images/medal/medal13.jpg"><img src="images/medal/medal13.jpg" height="250" alt=""/></a>    <a class="fancybox fancybox-effects-c" href="images/medal/medal14.jpg"><img src="images/medal/medal14.jpg" height="250" alt=""/></a>    <a class="fancybox fancybox-effects-c" href="images/medal/medal15.jpg"><img src="images/medal/medal15.jpg" height="250" alt=""/></a>
+        <a class="fancybox fancybox-effects-c" href="images/medal/medal16.jpg"><img src="images/medal/medal16.jpg" height="250" alt=""/></a>
+            <a class="fancybox fancybox-effects-c" href="images/medal/medal17.jpg"><img src="images/medal/medal17.jpg" height="250" alt=""/></a>
+                <a class="fancybox fancybox-effects-c" href="images/medal/medal18.jpg"><img src="images/medal/medal18.jpg" height="250" alt=""/></a>
+                    <a class="fancybox fancybox-effects-c" href="images/medal/medal19.jpg"><img src="images/medal/medal19.jpg" height="250" alt=""/></a>
+                        <a class="fancybox fancybox-effects-c" href="images/medal/medal20.jpg"><img src="images/medal/medal20.jpg" height="250" alt=""/></a>
+                                                <a class="fancybox fancybox-effects-c" href="images/medal/medal21.jpg"><img src="images/medal/medal21.jpg" height="250" alt=""/></a>
+                        
+                        </div>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+           
+                        
+        <div class="swiper-slide aboutus-wrap-5">
+              <div class="container ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s" style="margin:0;  background:rgba(255,255,255,0.7); border-radius:5px;">
+              
+            <h3 style="display: block;width: 215px;margin-top: 10px; margin-bottom:120px;">发展历程</h3>
+            <div class="content light content-1 development-cont">
+                  <div class="born clearfix"> <b></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: red;">2002前</p>
+                      <i></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">前身是福通公司物业管理部</p>
+                      <p class="born_text_height" style="text-indent:2em">同博物业的前身福通公司物业管理部从事的基本上还是在邮科院打扫卫生、零星维修一类基础物业服务。。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #ff8503;"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #ff8503;">2014年</p>
+                      <i style="background: #ff8503;"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">各项目部建立并推进使用微信服务平台</p>
+                      <p style="text-indent:2em">同博物业的前身福通公司物业管理部从事的基本上还是在邮科院打扫卫生、零星维修一类基础物业服务。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #01abfc"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #01abfc">2013年</p>
+                      <i style="background: #01abfc"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">前期介入并承接虹信科技园区</p>
+                      <p style="text-indent:2em">会议由同博公司综合办组织，公司所有B、C层经理人及培训管理员共计40余人参会。2014年，同博公司C层经理人和各部门骨干员工按照公司年初下达的“同博公司2014年学习计划”，积极开展网络学习、面授课程学习和工作案例编写，同时通过网上与网下的互动进行学习转化，提升工作成效。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #bfce01"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #bfce01">2012年</p>
+                      <i style="background: #bfce01"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">前期介入并承接光迅科技园区</p>
+                      <p style="text-indent:2em">会议由同博公司综合办组织，公司所有B、C层经理人及培训管理员共计40余人参会。2014年，同博公司C层经理人和各部门骨干员工按照公司年初下达的“同博公司2014年学习计划”，积极开展网络学习、面授课程学习和工作案例编写，同时通过网上与网下的互动进行学习转化，提升工作成效。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #0e2d4a"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #0e2d4a">2011年</p>
+                      <i style="background: #0e2d4a"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">受邀管理武汉经济开发区银泰工业园</p>
+                      <p style="text-indent:2em">会议由同博公司综合办组织，公司所有B、C层经理人及培训管理员共计40余人参会。2014年，同博公司C层经理人和各部门骨干员工按照公司年初下达的“同博公司2014年学习计划”，积极开展网络学习、面授课程学习和工作案例编写，同时通过网上与网下的互动进行学习转化，提升工作成效。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #feeb02"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #feeb02">2010年</p>
+                      <i style="background: #feeb02"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">日资控股藤仓凤凰工业园前期介入及承接</p>
+                      <p style="text-indent:2em">会议由同博公司综合办组织，公司所有B、C层经理人及培训管理员共计40余人参会。2014年，同博公司C层经理人和各部门骨干员工按照公司年初下达的“同博公司2014年学习计划”，积极开展网络学习、面授课程学习和工作案例编写，同时通过网上与网下的互动进行学习转化，提升工作成效。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #853800"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #853800">2009年</p>
+                      <i style="background: #853800"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">同博物业推进标准化，通过ISO90001外审</p>
+                      <p style="text-indent:2em">会议由同博公司综合办组织，公司所有B、C层经理人及培训管理员共计40余人参会。2014年，同博公司C层经理人和各部门骨干员工按照公司年初下达的“同博公司2014年学习计划”，积极开展网络学习、面授课程学习和工作案例编写，同时通过网上与网下的互动进行学习转化，提升工作成效。</p>
+                    </div>
+              </div>
+                  <div class="born clearfix"> <b style="background: #f9b27a"></b>
+                <div class="img_box">
+                      <p class="txt2" style="background: #f9b27a">2008年</p>
+                      <i style="background: #f9b27a"></i> 
+                      <!--<img class="img_width1" src="images/timg_jh.jpg" height="200">--> 
+                    </div>
+                <div class="born_text">
+                      <p class="txt1">光通信产业大楼前期介入及承接</p>
+                      <p style="text-indent:2em">会议由同博公司综合办组织，公司所有B、C层经理人及培训管理员共计40余人参会。2014年，同博公司C层经理人和各部门骨干员工按照公司年初下达的“同博公司2014年学习计划”，积极开展网络学习、面授课程学习和工作案例编写，同时通过网上与网下的互动进行学习转化，提升工作成效。</p>
+                    </div>
+              </div>
+                </div>
+          </div>
+            </div>
+            
+                                    <div class="swiper-slide aboutus-wrap-4">
+                        <div class="aboutus-title-3">
+               <h3 class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s">logo介绍</h3> 
+               </div>
+               <div class="logo-intro">
+                 <div class="logo-img1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                   <img src="images/logo.jpg" alt="" width="400">
+                 </div>	
+                 <div class="logo-img2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.8s">
+                   <img src="images/logo2.jpg" alt="" width="170">
+                 </div>	
+                  <div class="logo-img3">
+                    <div class="square1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.1s"></div>
+                    <div class="square2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.1s"></div>
+                 </div>	
+                 <div class="logo-icon1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                  <span>概念</span>
+                 </div>	
+                 <div class="logo-icon2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.8s">
+                   <span>形态</span>
+                 </div>
+                 <div class="logo-icon3 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="1.1s">
+                   	<span>色彩</span>
+                 </div>
+                 <div class="intro-cont1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.3s">
+                  整个logo由同博物业中文名称、英文名称和图案组成。
+    logo以智慧为概念，以服务为基础，以联想为依据，以充分展现“智慧服务生活”理念。
+
+                 </div>
+                 <div class="intro-cont2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.8s">
+                  构成中“T”代表一把钥匙，同时也是同博物业首字母，则下方的图形则是一只手，代表业主及其生活，整个图形象征着同博物业如钥匙一般解决业主难题，给业主如呵护一般的温暖感受。
+                 </div>
+                 <div class="intro-cont3 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="1.1s">
+                 本logo以红、蓝为主色，红色调标着激情、斗志、蒸蒸日上，象征着企业的发展状态及整体员工的态度，而蓝色代表着忠诚和求知欲，象征着同博物业诚信、专注、不断创新，追求卓越的理念。
+
+
+                 </div>
+                 
+                 </div>	
+               
+               </div>
+
+      </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination swiper-pagination-v"></div>
+        </div>
+  </div>
+    </div>
+<div class="copyright_tb">
+      <div class="tb_l areaheart">
+    <p>同博物业</p>
+    <ul class="tb_text clearfix">
+          <li> <a href="#">关于我们</a>
+        <ol class="clearfix">
+              <li><a href="#">公司简介</a></li>
+              <li><a href="#">企业资质</a></li>
+              <li><a href="#">组织机构</a></li>
+            </ol>
+      </li>
+          <li> <a href="#">新闻中心</a>
+        <ol class="clearfix">
+              <li><a href="#">公司新闻</a></li>
+              <li><a href="#">行业资讯</a></li>
+              <li><a href="#">同博期刊</a></li>
+            </ol>
+      </li>
+          <li> <a href="#">项目与服务</a>
+        <ol class="clearfix">
+              <li><a href="#">餐饮</a></li>
+              <li><a href="#">物业</a></li>
+              <li><a href="#">幼教</a></li>
+              <li><a href="#">医疗</a></li>
+            </ol>
+      </li>
+          <li> <a href="#">人才招聘</a>
+        <ol class="clearfix">
+              <li><a href="#">人才理念</a></li>
+              <li><a href="#">招聘信息</a></li>
+            </ol>
+      </li>
+          <li> <a href="#">联系我们</a> </li>
+        </ul>
+  </div>
+    </div>
+<div class="copyright_text">
+      <p>Copyright@2015.tongbo All rights reserved</p>
+    </div>
+
+<!-- custom scrollbar plugin --> 
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script>
+		(function($){
+			$(window).on("load",function(){
+				
+				$(".content-1").mCustomScrollbar({
+					axis:"xy",
+					theme:"dark-3"
+				});
+				$(".content-2").mCustomScrollbar({
+					axis:"x",
+					theme:"dark-3",
+					advanced:{autoExpandHorizontalScroll:true}
+				});
+				
+			});
+		})(jQuery);
+	</script> 
+
+<!-- Swiper JS --> 
+
+<script src="js/swiper.min.js"></script> 
+<script src="js/swiper.animate.min.js"></script>
+
+<!-- Initialize Swiper --> 
+<script>
+	var swiperHonor = new Swiper('.swiper-container-honor', {
+        spaceBetween: 10,
+    });
+	$('#tab1').click(function(){
+swiperHonor.slideTo(0, 1000, false);//切换到第一个slide，速度为1秒
+})
+$('#tab2').click(function(){
+swiperHonor.slideTo(1, 1000, false);//切换到第一个slide，速度为1秒
+})
+    var swiperH = new Swiper('.swiper-container-h', {
+        pagination: '.swiper-pagination-h',
+        paginationClickable: true,
+        spaceBetween: 10,
+		effect : 'fade',
+fade: {
+  crossFade: true,
+}
+    });
+    var swiperV = new Swiper('.swiper-container-v', {
+        pagination: '.swiper-pagination-v',
+        paginationClickable: true,
+        direction: 'vertical',
+        spaceBetween: 50,
+		mousewheelControl : true,
+		initialSlide :0,
+		onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+    onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 去除iPhone中默认的input样式 */
+input{/* -webkit-appearance:none; */ resize: none;}
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,
+aside, details,figcaption,figure,footer,header, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
+/* 设置HTML5元素为块 */
+article, aside, details,figcaption,figure,footer,header, menu,nav,section {
+    display: block;
+}
+/* 图片自适应 */
+img {
+    max-width: 100%;
+    height: auto;
+    width:auto\9; /* ie8 */
+    -ms-interpolation-mode:bicubic;/*为了照顾ie图片缩放失真*/
+}
+*:focus {
+    outline:none;
+}
+
+/*使用盒子内减模式*/
+*{
+    box-sizing:border-box;
+}
+/* 清零 */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,
+aside, details,figcaption,figure,footer,header, menu,nav,section{margin:0; padding:0; border:none;}
+ul,ol,li{list-style:none;}
+fieldset,img{border: none;}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+html{
+    width: 100%;
+    max-width: 720px;
+    margin:0 auto;
+}
+
+i,em,b{
+    font-weight: normal;
+    font-style: normal;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    appearance:none;  /*下拉框去掉右侧图标*/
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    font-family:"Microsoft YaHei", '微软雅黑', "MicrosoftJhengHei", '华文细黑',' STHeiti, MingLiu';
+}
+textarea,input{
+    box-shadow:0px 0px 0px rgba(0,0,0,0);
+    -webkit-appearance:none;
+}
+
+body {
+    background-color: #f5f5f5;
+    width: 100%;
+    overflow-x: hidden;
+    font-family: "Microsoft YaHei", '微软雅黑', "MicrosoftJhengHei", '华文细黑',' STHeiti, MingLiu';
+    line-height:1.5;
+    color: #666;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight:normal;
+}
+a {
+    text-decoration: none;
+    color: #666;
+}
+img {
+    display: block;
+}
+textarea{
+    display:block;
+    resize: none;
+}
+button {
+    cursor: pointer;
+}
+
+.clearfix::after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+

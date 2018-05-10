@@ -1,0 +1,633 @@
+/* CSS Document */
+body {
+	background: #fff;
+}
+.main-wrap {
+	width: 100%;
+}
+.container {
+	width: 960px;
+	margin: 0 auto;
+}
+.grid {
+	position: relative;
+	overflow: hidden;
+	list-style: none;
+}
+figure {
+	float: left;
+	height: 320px;
+	margin: 0 1% 0 0;
+	background: #3085a3;
+}
+.section-top {
+	width: 960px;
+	margin: 0 auto;
+	overflow: auto;
+	padding-top: 10em;
+	margin-bottom: -5em;
+}
+.section-bottom {
+	padding-top: 12em;
+}
+.about_us .main h3, .about_us .main .property-h3 {
+	position: relative;
+	font-size: 48px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+	font-weight: bold;
+}
+.about_us .main .property-h3 {
+	float: left;
+	font-size: 40px;
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-left: 5px solid #e40210;
+	padding-left: 20px;
+	letter-spacing: 2.5px;
+}
+.service-title:before, .contact-title:before {
+	content: "";
+	position: absolute;
+	width: 170px;
+	height: 2px;
+	top: 75px;
+	bottom: 0;
+	left: 395px;
+	text-align: center;
+	background-color: red;
+}
+.contact-title:before {
+	width: 230px;
+	left: 365px;
+}
+.return {
+	float: right;
+}
+.return a {
+	float: left;
+}
+.return a:hover {
+	color: inherit;
+}
+.return .txt {
+	float: left;
+	margin-top: 25px;
+	margin-right: 10px;
+}
+.return img {
+	width: 30px;
+	height: auto;
+	margin-top: 20px;
+}
+.main-wrap {
+	overflow: auto;
+	padding-top: 11em;
+	padding-bottom: 11em;
+	clear: both;
+}
+.left-wrap {
+	float: left;
+	width: 460px;
+	height: 　350px;
+}
+.img-wrap {
+	border: solid 1px #DDDDDD;
+	padding: 5px;
+}
+.left-wrap img, .right-wrap img {
+	width: 448px;
+}
+.right-wrap {
+	float: right;
+	width: 460px;
+	margin-left: 2.5em;
+}
+.article {
+	border-top: solid 3px #DDDDDD;
+	line-height: 1.8;
+}
+.article h4 {
+	font-size: 22px;
+	padding-top: .5em;
+	padding-bottom: .3em;
+}
+.left-wrap p, .right-wrap p {
+	font-size: 14px;
+}
+.info-wrap {
+	border-top: solid 3px #DDDDDD;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+.addr, .tel {
+	clear: both;
+	overflow: auto;
+}
+.addr {
+	margin-bottom: 1em;
+}
+.addr .icon, .tel .icon {
+	float: left;
+	margin-right: 1em;
+	width: 48px;
+	height: 48px;
+	background: url("../images/busi_pos.png") center no-repeat;
+	border: 1px solid #dddddd;
+}
+.tel .icon {
+	background-image: url("../images/busi_tel.png");
+}
+.info-wrap p {
+	margin-top: 1em;
+}
+.info-wrap .p2 {
+	margin-top: .3em;
+}
+.copyright_tb {
+	clear: both;
+}
+
+.section-top span {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+/* 关于我们 */
+.aboutus-banner {
+  height: 0;
+  background: rgba(255,255,255,0);
+}
+.swiper-slide h3 {
+  color: #db643c;
+  padding-left: 15px;
+  border-left: 20px solid #db643c;
+}
+.aboutus-wrap-1 {
+	margin: 0;
+  position: relative;
+  background: url(../images/aboutus_bg.jpg) no-repeat;
+  background-size:cover;
+}
+
+.aboutus-wrap-1 h3 {
+  width: 200px;
+  margin-left: 3em;
+}
+
+.aboutus-wrap-1 .container {
+  margin: 0 0 0 30em;
+}
+
+.aboutus-wrap-2 {
+    background: url(../images/comprehensive_bg.jpg) no-repeat;
+  background-position: bottom;
+  background-size:contain;
+}
+
+.aboutus-wrap-2-2 {
+      background: url(../images/services_bg2.jpg) no-repeat;
+  background-position: right;
+  background-size:contain;
+}
+
+.aboutus-title-2-2 {
+	position: absolute;
+	width: 250px;
+	top: 2em;
+	left: 39.8em;
+  z-index: 100;
+}
+
+.aboutus-title-2-2 h3 {
+  border: 0;
+}
+
+.aboutus-wrap-2-2 .return {
+  position: absolute;
+  top: 9.2em;
+  left: 60em;
+}
+
+.aboutus-wrap-2-2 .return a:hover {
+  border-bottom: 1px solid #000;
+}
+
+.aboutus-wrap-5 {
+	margin: 0;
+  position: relative;
+  background: url(../images/aboutus_bg02.jpg) no-repeat;
+  background-size:cover;
+}
+
+.comprehensive-icon {
+  margin: 0 0 6em -45em;
+}
+
+.comprehensive-icon .icon1, .comprehensive-icon .icon2, .comprehensive-icon .icon3 {
+	position: absolute;
+  width: 190px;
+  height: 234px;
+  background: url(../images/comprehensive_icon_bg.png) no-repeat;
+  background-size: cover;
+      -webkit-transition: 1s ease-in-out all;
+  -moz-transition: 0.5s ease-in-out all;
+  -ms-transition: 0.5s ease-in-out all;
+  -o-transition: 0.5s ease-in-out  all;
+  transition: 0.5s ease-in-out all;
+}
+
+.comprehensive-icon .icon1 {
+  bottom: 5em;
+  left: 12em;
+  top: 18em;
+}
+
+.comprehensive-icon .icon2 {
+  bottom: 5em;
+  left: 27em;
+  top: 18em;
+}
+
+.comprehensive-icon .icon3 {
+  bottom: 5em;
+  left: 42em;
+  top: 18em;
+}
+
+.comprehensive-icon .icon1:hover, .comprehensive-icon .icon2:hover, .comprehensive-icon .icon3:hover {
+  margin-top: -30px;
+}
+
+.comprehensive-icon span {
+	display: block;
+	margin-top: 2.4em;
+	margin-left: 2.8em;
+	width: 50px;
+  font-size: 25px;
+  color: #fff;
+}
+
+.aboutus-wrap-2 .text {
+	position: absolute;
+  width: 400px;
+  top: 11em;
+  right: 20em;
+  text-align: left;
+}
+
+.aboutus-wrap-2 h3 {
+	position: absolute;
+	width: 250px;
+	top: 0;
+	left: 0;
+}
+
+.aboutus-title-2 {
+		position: absolute;
+	width: 250px;
+	top: 5em;
+	left: 25em;
+}
+
+.aboutus-title-2 h3 {
+  border: 0;
+}
+
+.aboutus-wrap-2-2 .title {
+  font-size: 28px;
+  float: left;
+  margin-top: .9em;
+  color: #fff;
+}
+
+.feature-service {
+  width: 860px;
+  margin-top: 5em;
+  margin-right: 5em;
+  text-align: left;
+}
+
+.feature-service .service1, .feature-service .service2, .feature-service .service3, .feature-service .service4, .feature-service .service5 {
+  margin-top: 2em;
+    -webkit-transition: 1s ease-in-out all;
+  -moz-transition: 0.5s ease-in-out all;
+  -ms-transition: 0.5s ease-in-out all;
+  -o-transition: 0.5s ease-in-out  all;
+  transition: 0.5s ease-in-out all;
+  
+}
+
+.feature-service .service1 {
+  width: 713px;
+  height: 95px;
+  margin-left: 2em;
+  background-image:url(../images/feature_service1_bg.png);
+}
+
+.feature-service .service1:hover {
+  margin-left: 65px;
+}
+
+#inline1 {
+  width:400px;
+  display: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+#inline1 h3 {
+  font-size: 25px;
+  border-bottom: 1px solid #CBC9C9;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+.feature-service .service2 {
+  width: 752px;
+  height: 95px;
+  margin-left: -.2em;
+  background-image:url(../images/feature_service2_bg.png);
+}
+
+.feature-service .service2:hover {
+  margin-left: 35px;
+}
+
+.feature-service .service3 {
+  width: 801px;
+  height: 95px;
+  margin-left: -2.6em;
+  background-image:url(../images/feature_service3_bg.png);
+}
+
+.feature-service .service3:hover {
+  margin-left:0;
+}
+
+.feature-service .service4 {
+  width: 833px;
+  height: 95px;
+  margin-left: -4.4em;
+  background-image:url(../images/feature_service4_bg.png);
+}
+
+.feature-service .service4:hover {
+  margin-left:-40px;
+}
+
+.feature-service .service5 {
+  width: 882px;
+  height: 95px;
+  margin-left: -7.2em;
+  background-image:url(../images/feature_service5_bg.png);
+}
+
+.feature-service .service5:hover {
+  margin-left:-80px;
+}
+
+.service1 .title {
+  color: #51504e;
+  margin-left: 1.9em;
+}
+
+.service2 .title {
+  margin-left: 2.5em;
+}
+
+.service3 .title {
+  color: #51504e;
+  margin-left: 2.8em;
+}
+
+.service4 .title {
+  margin-left: 4em;
+}
+
+.service5 .title {
+  margin-left: 5em;
+}
+
+.service1 .feature1 {
+    position: absolute;
+    width: 400px;
+      margin-top: .5em;
+  color: #51504e;
+  margin-left: 16.9em;
+}
+
+.service2 .feature2 {
+    position: absolute;
+    width: 400px;
+    margin-top: .5em;
+  color: #fff;
+  margin-left: 18.9em;
+}
+
+.service3 .feature3 {
+    position: absolute;
+    width: 400px;
+    margin-top: 1.2em;
+  color: #51504e;
+  margin-left: 21.4em;
+}
+
+.service4 .feature4 {
+    position: absolute;
+    width: 400px;
+    margin-top: .4em;
+  color: #fff;
+  margin-left: 23.4em;
+}
+
+.service5 .feature5 {
+    position: absolute;
+    width: 400px;
+    margin-top: .4em;
+  color: #fff;
+  margin-left: 26.3em;
+}
+
+.aboutus-title-3 {
+		position: absolute;
+	width: 250px;
+	top: 1em;
+	left: 45em;
+  z-index: 100;
+}
+
+.aboutus-title-3 h3 {
+  border: 0;
+}
+
+.aboutus-wrap-4 .logo-img1 {
+  position: absolute;
+  top: 13.5em;
+  left: 20em;  
+}
+
+.aboutus-wrap-4 .logo-img2 {
+  position: absolute;
+  top: 26em;
+  left: 35em;  
+}
+
+.aboutus-wrap-4 .logo-img3 .square1 {
+  position: absolute;
+  width:180px;
+  height: 90px;
+  background-color: #e40210;
+  top: 41em;
+  left: 23em; 
+}
+
+.aboutus-wrap-4 .logo-img3 .square2 {
+  position: absolute;
+  width:180px;
+  height: 90px;
+  background-color: #0f5089;
+  top: 41em;
+  left: 34em; 
+}
+
+.aboutus-wrap-4 .logo-icon1, .aboutus-wrap-4 .logo-icon2, .aboutus-wrap-4 .logo-icon3 {
+    width: 140px;
+  height: 114px;
+}
+
+.aboutus-wrap-4 .logo-icon1 {
+  background:url(../images/logo_icon1.png);
+  background-size: cover;
+  position: absolute;
+  top: 14em;
+  left: 48em;
+}
+
+.aboutus-wrap-4 .logo-icon2 {
+  background:url(../images/logo_icon2.png);
+  background-size: cover;
+  position: absolute;
+  top: 27em;
+  left: 52em;
+}
+
+.aboutus-wrap-4 .logo-icon3 {
+  background:url(../images/logo_icon3.png);
+  background-size: cover;
+  position: absolute;
+  top: 40em;
+  left: 49em;
+}
+
+.aboutus-wrap-4 .logo-icon1 span, .aboutus-wrap-4 .logo-icon2 span, .aboutus-wrap-4 .logo-icon3 span {
+  display: block;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 1.1em;
+  margin-left: 0.9em;
+}
+
+.aboutus-wrap-4 .intro-cont1 {
+  width: 400px;
+  position: absolute;
+  top: 15em;
+  left: 58em; 
+  text-align: left; 
+}
+
+.aboutus-wrap-4 .intro-cont2 {
+  width: 400px;
+  position: absolute;
+  top: 27em;
+  left: 62em; 
+  text-align: left;  
+}
+
+.aboutus-wrap-4 .intro-cont3 {
+  width: 400px;
+  position: absolute;
+  top: 40em;
+  left: 59em;
+  text-align: left;   
+}
+
+.aboutus-title-6 {
+	position: absolute;
+	width: 250px;
+	top: 6.5em;
+	left: 25em;
+}
+
+.aboutus-wrap-6 {
+ background-image:url("../images/cup02_1.jpg"),url("../images/cup02_2.jpg");
+background-repeat: no-repeat, no-repeat;  
+background-position: 8em 18.5em, 81em 18.5em;    
+background-size: 300px 418px, 300px 418px;          
+}
+
+.aboutus-wrap-6 .honor-tab {
+		position: absolute;
+  width: 350px;
+  top: 13em;
+  left: 68em;
+}
+
+.aboutus-wrap-6 .honor-tab a {
+  display: block;
+  float: left;
+  width: 100px;
+  padding: 10px 0 10px 0;
+  margin-right: 20px;
+  background: #db643c;
+  color: #fff;
+  letter-spacing: 1.8px;
+  font-size: 20px;
+}
+
+.swiper-container-honor {
+  margin-top: 10em;
+}
+
+.honor-wrap {
+  position: absolute;
+  width: 1150px;
+  top: 13.5em;
+  left: 25em;
+}
+
+.honor-img {
+  float: left;
+  width: 400px;
+}
+
+.honor-cont-1 .title {
+  color: #000;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  text-align: center;
+  border-bottom: 1px solid #E7DDDE;
+}
+
+.honor-cont-3 .qualification {
+  display: inline-block;
+  float: left;
+  margin-right: 1.6em;
+}
+
+.medal-wrap {
+  position: absolute;
+  width: 1200px;
+  top: 4.8em;
+  left: 20em;
+}
+
+.medal-wrap img {
+  float: left;
+}
+
+
+

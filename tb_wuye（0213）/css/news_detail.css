@@ -1,0 +1,30 @@
+.advice{
+    width: 100%;
+    padding-left: 0px;
+}
+
+.advice .txt1{
+    font-size: 20px;
+    color: #333333;
+    text-align: center;
+    font-weight: 900;
+}
+
+.txt3_img{
+    text-align: left;
+    text-indent: 0em!important;
+}
+.txt3_img>img{
+    display: inline-block;
+    border-radius: 0px!important;
+    margin-right: 0px!important;
+}
+
+.about_top .title  .title_title{
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: 0em;
+}
+.about_top .title_line{
+    line-height: 40px;
+}

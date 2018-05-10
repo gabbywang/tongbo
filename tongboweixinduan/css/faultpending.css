@@ -1,0 +1,298 @@
+/*html,body{ overflow-y:scroll; background-color: #FFFFFF;}
+html,body{ overflow:auto; /*min-height:101%;*/}
+html{ overflow:-moz-scrollbars-vertical;} */
+
+
+
+html,body{background-color: #FFFFFF;
+	overflow-y:scroll;overflow-x:hidden;
+	/*去掉点击链接和文本框对象的半透明覆盖层(iOS)或者虚框(Android):*/
+-Webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-text-size-adjust: none;
+-webkit-user-select: none;
+-webkit-overflow-scrolling:touch;
+webkit-box-sizing: border-box;
+-webkit-appearance: none;
+ }
+
+
+
+
+header {
+ width: 100%;
+ height: 60px;
+ 
+ background-color: #333333;
+ position: fixed;
+	top: 0;
+	 z-index: 100!important;
+	 opacity: 0;
+}
+
+header .titel{
+
+
+	width: 100%;
+	max-width: 702px;
+   
+
+
+}
+header .titel img{
+	
+	float: left;
+	margin-left: 20px;
+	margin-top: 18px;
+	margin-right:20px;
+}
+header .titel p{
+	font-family: "微软雅黑";
+	font-size: 24px;
+    line-height: 60px;
+	color: #FFFFFF;
+
+	
+}
+
+center {
+  width: 100%;
+  height: auto;
+/*  margin-top: 60px;*/
+  overflow: hidden;
+}
+
+
+
+footer {
+  width: 100%;
+ /* height: 3.75em;*/
+  /*padding-left: 0.55555556rem;
+  padding-right: 0.55555556rem;*/
+  z-index: 100!important
+}
+
+/*菜单*/
+footer .bottom{
+	position: fixed;
+	bottom: 0;
+	max-width: 712px;
+	width: 100%;
+	height: 48px;
+	clear: both;
+}
+footer .bottom p{
+	width: 33.33333%;
+	float: left;
+	background-color: #CFC9BF;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #646464;
+	line-height: 48px;
+	text-align: center;
+	
+}
+footer .bottom .dian1{
+	
+	position: absolute;
+	left:33.333%;
+	top:30%;	
+}
+footer .bottom .dian1 img{
+	
+	width:60%
+}
+footer .bottom .dian2{
+	position: absolute;
+	left:66.666%	;
+	top:30%
+}
+footer .bottom .dian2 img{
+	
+	width:60%
+}	
+/*故障*/	
+footer .lostbottom{
+	
+	position: fixed;
+	bottom: 0;
+	max-width: 712px;
+	
+	clear: both;
+	width: 100%;
+	height: 80px;
+    background-color: #EBE5D6;
+    border-top: 1px solid #7D6E49;
+	
+}
+footer .lostbottom .phone{
+	position: relative;
+	width: 100%;
+    margin: 0 auto;	
+}
+
+footer .lostbottom .phone img{
+	display: block;
+	
+	float: left;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+footer .lostbottom .phone p{
+	padding-top: 10px;
+	font-size: 16px;
+	color: #646464;
+	text-align: left;
+	line-height: 28px;
+}
+
+/*键盘*/
+footer .bottomwuyu{
+	position: fixed;
+	bottom: 0;
+	max-width: 712px;
+	width: 100%;
+	height: 48px;
+	clear: both;
+    background-color: #F2F2F2;
+}
+footer .bottomwuyu .jianpan{
+	width: 16%;
+	height: 48px;
+	float: left;
+    border: 2px solid #BCBCBC;
+	background-color: #F2F2F2;
+}
+footer .bottomwuyu .jianpan img{
+	/*width: 100%;*/
+	  width: 60%;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+footer .bottomwuyu .we{
+	position: relative;
+    height: 48px;
+	width: 28%;
+	float: left;
+    border-right: 2px solid #BCBCBC;
+    border-top: 2px solid #BCBCBC;
+    border-bottom: 2px solid #BCBCBC;
+	background-color: #F2F2F2;
+}
+footer .bottomwuyu .we img{
+
+     width: 24%;
+	float: left;
+    display: block;
+	margin: 0 auto;
+	margin-left:10px ;
+	margin-right: 10px;
+	margin-top: 8px;
+}
+footer .bottomwuyu .we p{
+
+	font-family: "微软雅黑";
+	font-size:18px;
+	color: #646464;
+	line-height:48px;
+	text-align: left;
+	
+}
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*待处理列表*/
+
+center .faultpending .diaoding{
+	overflow: auto;
+	width: 94%;
+	padding:10px 0;
+	border-bottom: 2px solid #7D6E49;  
+}
+center .faultpending .diaoding .diaodingleft{
+	float: left;
+}
+center .faultpending .diaoding .diaodingleft span{
+	margin-right: 10px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #01A5FA;
+	color: #F73600;
+	text-align: left;
+}
+center .faultpending .diaoding .diaodingleft p{
+	
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #323232;
+	text-align: left;
+}
+
+
+center .faultpending .diaoding .diaodingright{
+	position: absolute;	
+	right: 20%;
+    /*float: right;*/
+    width: 20%;
+	}
+
+center .faultpending .diaoding .diaodingright img{	
+	width: 60%;	
+	margin: 0 auto;
+	opacity: 0.7;
+	overflow: hidden;
+	}
+
+
+center .faultpending .diaoding .qr{
+    float: right;
+    margin-top: 10px;
+	width: 16%;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 26px;
+	text-align: center;
+	background-color: #FCA603;
+	border: 2px solid #D45400;
+	border-radius: 4px;	
+}
+center .faultpending .qr a{
+    
+	color: #FFFFFF;
+	
+}
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+

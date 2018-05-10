@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>同博科技</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/ScrollPic.js"></script>
+
+    <script src="js/jquery-1.4.3.min.js"></script>	
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.4.pack.js"></script>	
+	<script type="text/javascript" src="js/jquery.fancybox-1.3.4.pack.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox-1.3.4.css" media="screen" /> 	
+
+<script type="text/javascript">		
+	$(document).ready(function() {			
+		/*			*   Examples - images			*/			
+		$("a#example7").fancybox({
+				'titlePosition'	: 'inside'
+			});
+				
+		$("a[rel=example_group]").fancybox({	
+		'transitionIn'		: 'none',				
+		'transitionOut'		: 'none',				
+		'titlePosition' 	: 'over',				
+		'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {	
+		return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';				
+		}			
+		});			
+		/*			*   Examples - various			*/			
+		$("#various1").fancybox({				
+			'titlePosition'		: 'inside',				
+			'transitionIn'		: 'none',				
+			'transitionOut'		: 'none'			
+		});
+			$("#various2").fancybox();			
+			$("#various3").fancybox({				
+				'width'				: '75%',
+				'height'			: '75%',				
+				'autoScale'			: false,				
+				'transitionIn'		: 'none',
+			'transitionOut'		: 'none',				
+			'type': 'iframe'			
+			});			
+			$("#various4").fancybox({				
+				'padding'			: 0,				
+				'autoScale'			: false,				
+				'transitionIn'		: 'none',				
+				'transitionOut'		: 'none'			
+			});		
+	});	
+	</script>
+
+
+
+
+
+
+
+</head>
+<body>
+<div id="top">
+  <div class="logo"><img src="images/index/logo.png"></div>
+  <div class="nav">
+			<ul  class="mainnav">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="aboutus.html">关于我们</a>
+				    <ul>
+                        <li><a href="aboutus.html#gywm">公司简介</a></li>
+                        <li><a href="aboutus.html#zzjg"">组织结构</a></li>
+                        <li><a href="aboutus.html#fzlc">发展历程</a></li>
+                        <li><a href="aboutus.html#ryzz">荣誉资质</a></li>
+                    </ul>
+				</li>
+				
+				<li><a href="newslist.html">新闻中心</a>
+				    <ul>
+                        <li><a href="newslist.html">公司新闻</a></li>
+				        <li><a href="qikanlist.html">同博期刊</a></li>
+                    </ul>
+				</li>
+				
+				<li><a href="product.html">产品与服务</a>
+				   <ul>
+                        <li><a href="product.html">亚光公司</a></li>
+				        <li><a href="">同博物业</a></li>
+                    </ul>
+				</li>
+				
+				<li><a href="joinus.html">加入同博</a>
+				    <ul>
+                        <li><a href="joinus.html#jrwm">加入我们</a></li>
+                        <li><a href="joinus.html#zp">社会招聘</a></li>
+                        <li><a href="joinus.html#zp">实习生招聘</a></li>
+                    </ul>
+				</li>
+
+				<li><a href="lxwmindex.html">联系我们</a></li>
+			</ul>
+			</div>
+</div>
+<div class="product-banner">
+  <!--<div class="tupian"><img src="images/productimg/product_banner.png"> </div>-->
+  <div class="ziti">
+    <p class="p1">产品与服务</p>
+    <p class="p2">Products and Service</p>
+    <p class="p3">深圳市亚光通信有限公司成立于1989年，注册资金500万，是隶属于烽火科技集团的全资子公司。 依托集团销<br />
+      售渠道，亚光产品目前已在全球广泛应用。公司一直专注于通信终端设备的研发、制造、销售。目前产品涵盖<br />
+      光纤收发器、协议转 换器、无线路由器、铜线网关、PON网关、电力猫、Cable线网关(EoC)等。</p>
+  </div>
+</div>
+<div id="subnav">
+  <div class="s">
+    <div class="s1">
+      <p>亚光公司</p>
+    </div>
+    <div class="s1">
+      <p>同博物业</p>
+    </div>
+  </div>
+</div>
+<div class="product">
+  <div class="gywm">
+    <p>公司简介</p>
+    <div class="gzt">
+      <div class="gz">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市亚光通信有限公司成立于1989年，注册资金500万，是隶属于烽火科技集团的全资子公司。 依托集团销售渠道，亚光产品目前已在全球广泛应用。<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市亚光通信有限公司一直专注于通信终端设备的研发、制造、销售。目前产品涵盖光纤收发器、协议转换器、无线路由器、铜线网关、PON网关、电力猫、Cable线网关(EoC)等。公司设立于深圳市福田区八卦三路光纤小区，拥有深圳、武汉两大基地。现有员工300余人，生产场地7000余平米。公司研发实力雄厚，并被政府认定为高新技术企业。公司自成立以来，始终坚持以人才为本、诚信立业的经营原则，荟萃业界精英，将国外先进的信息技术、管理方法及企业经验与国内企业的具体实际相结合，为客户提供全方位的解决方案。公司严格按照国际标准进行设计、制造，以搞质量产品取信于客户。<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市亚光通信有限公司紧密跟踪通信终端设备的技术和行业发展特点，不断优化产品结构，使用户得到最优质的服务和最好的投资回报。<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最好的产品、最好的服务、最好的信誉，亚光公司愿意成为您最可信赖的长期合作伙伴。</div>
+      <div class="gt">
+        <div class="hualan"></div>
+      </div>
+    </div>
+    <div class="gzx"><img src="images/productimg/p02.png" /></div>
+  </div>
+  <div class="ryzz">
+    <div class="rybt">
+      <p>荣誉资质</p>
+    </div>
+    <div class="zs">
+       <div class="jtz" id="LeftArr"><img src="images/productimg/arrow_left.png"></div>
+       <div class="jty" id="RightArr"><img src="images/productimg/arrow_right.png"></div>    
+<div class=blk_29>
+<div class=Cont id=ISL_Cont_1 style="width:900px;"><!-- 图片列表 begin -->
+
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/DXD.png" title="电信设备进网许可证">
+      	<img alt="" src="images/productimg/DX.png" /></a>	
+      	
+        <p>电信设备进网许可证</p>
+      </div>
+      
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/WGD.png" title="外观设计专利证书">
+      	<img alt="" src="images/productimg/WG.png"/></a>
+        <p>外观设计专利证书</p>
+      </div>
+      
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/HG110D.png" title="HG110-CE证书">
+      	<img alt="" src="images/productimg/HG110.png"/></a>
+        <p>HG110-CE证书</p>
+      </div>
+      
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/HG16D.png" title="HG16 0-CE证书">
+      	<img alt="" src="images/productimg/HG16.png"/></a>
+        <p>HG16 0-CE证书</p>
+      </div>
+      
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/zhlglD.png" title="质量管理体系认证证书">
+      	<img alt="" src="images/productimg/zhlgl.png"/></a>
+        <p>质量管理体系认证证书</p>
+      </div>
+      
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/onuD.png" title="ONU CE证书">
+      	<img alt="" src="images/productimg/onu.png"/></a>
+        <p>ONU CE证书</p>
+      
+      </div>
+      
+      <div class="zs1">
+      	<a id="example7" href="images/productimg/vdsl-modem_03D.png" title="VDSL modem CE证书">
+      	<img alt="" src="images/productimg/vdsl-modem_03.png"/></a>
+        <p>VDSL modem CE证书</p>
+      
+      </div>
+      
+</div>
+</div>
+    </div>
+  </div>
+ 
+  <a href="producterji.html"><div class="cpjs">
+    
+    <div class="cpbt">
+      <p>产品介绍</p>
+    </div>
+   
+   <div class="cp">
+      <div class="cp1"><img src="images/productimg/xdsl.png"/>
+        <p>xDSL家庭网关</p>
+      </div>
+      <div class="cp1"><img src="images/productimg/pon.png"/>
+        <p>PON网关</p>
+      </div>
+      <div class="cp1"><img src="images/productimg/plc.png"/>
+        <p>PLC电力猫</p>
+      </div>
+      <div class="cp1"><img src="images/productimg/guangqianfsq.png"/>
+        <p>光纤收发器</p>
+      </div>
+   </div>
+ 
+
+  </div></a>
+ 
+ 
+ <div class="lxwm">
+    <div class="lxbt">
+      <p>联系我们</p>
+    </div>
+    <div class="lx">
+      <div class="dt"><img src="images/productimg/ditu_03.png"></div>
+      <div class="yz">
+        <div class="yz1"><img src="images/productimg/gs.png"/>
+          <p>公司：深圳市亚光通信有限公司</p>
+        </div>
+        <div class="yz1"><img src="images/productimg/dz.png"/>
+          <p>地址：武汉市洪山区邮科院路88号</p>
+        </div>
+        <div class="yz1"><img src="images/productimg/yb.png"/>
+          <p>邮编：430070 </p>
+        </div>
+        <div class="yz1"><img src="images/productimg/dh.png"/>
+          <p>电话：+86-27-87691309</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="bottom">
+  <div class="yewei1">
+    <ul class="guanyu">
+				 <li class="zi1"><a href="aboutus.html">关于我们</a></li>
+                 <li class="zi2"><a href="aboutus.html#gywm">公司简介</a></li>
+                 <li class="zi2"><a href="aboutus.html#zzjg"">组织结构</a></li>
+                 <li class="zi2"><a href="aboutus.html#fzlc">发展历程</a></li>
+                 <li class="zi2"><a href="aboutus.html#ryzz">荣誉资质</a></li>
+			</ul>
+			
+			<ul class="guanyu">
+				<li class="zi1"><a href="newslist.html">新闻中心</a></li>
+				<li class="zi2"><a href="newslist.html">公司新闻</a></li>
+				<li class="zi2"><a href="qikanlist.html">同博期刊</a></li>
+			</ul>
+    <ul class="guanyu">
+      <li class="zi1"><a href="product.html">产品于服务</a></li>
+      <li class="zi2"><a href="product.html">亚光公司</a></li>
+      <li class="zi2"><a href="product.html">同博物业</a></li>
+    </ul>
+    <ul class="guanyu">
+       <li class="zi1"><a href="joinus.html">加入同博</a></li>
+      <li class="zi2"><a href="joinus.html#jrwm">加入我们</a></li>
+      <li class="zi2"><a href="joinus.html#zp">社会招聘</a></li>
+      <li class="zi2"><a href="joinus.html#zp">实习生招聘</a></li>
+    </ul>
+    <ul class="guanyu">
+      <li class="zi1"><a href="lxwmindex.html">联系我们</a></li>
+    </ul>
+  </div>
+  <div class="yewei2"> Copyright@2016.tongbo All rights reserved </div>
+</div>
+
+<script src="js/scrollbar.js"></script>
+<script language="javascript" type="text/javascript">
+		<!--//--><![CDATA[//><!--
+		var scrollPic_02 = new ScrollPic();
+		scrollPic_02.scrollContId   = "ISL_Cont_1"; //内容容器ID
+		scrollPic_02.arrLeftId      = "LeftArr";//左箭头ID
+		scrollPic_02.arrRightId     = "RightArr"; //右箭头ID
+
+		scrollPic_02.frameWidth     = 1080;//显示框宽度
+		scrollPic_02.pageWidth      = 152; //翻页宽度
+
+		scrollPic_02.speed          = 15; //移动速度(单位毫秒，越小越快)
+		scrollPic_02.space          = 10; //每次移动像素(单位px，越大越快)
+		scrollPic_02.autoPlay       = false; //自动播放
+		scrollPic_02.autoPlayTime   = 3; //自动播放间隔时间(秒)
+
+		scrollPic_02.initialize(); //初始化
+							
+		//--><!]]>
+</script>
+</body>
+</html>

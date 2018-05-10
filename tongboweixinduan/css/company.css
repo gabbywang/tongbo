@@ -1,0 +1,138 @@
+
+
+
+
+
+ 
+
+
+
+
+center .tongbo .company{
+	width: 94%;
+	overflow: hidden;
+/*	height:160px;*/
+	margin: 0 auto;
+
+    margin-top:10px;
+   
+}
+
+center .tongbo .company .companytu{
+	width: 36%;
+	float: left;
+	margin: 0 auto;
+
+}
+center .tongbo .company .companytu img{
+	width: 100%;
+	display: block;
+	float: left;
+	margin: 0 auto;
+
+}
+center .tongbo .company .companyzi{
+	width: 60%;
+	float: right;
+	margin: 0 auto;
+	
+
+    overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+
+}
+
+center .tongbo .company .companyzi p{
+    width: 100%;
+	font-family: "微软雅黑";
+	/*font-size: 16px;*/
+	color: #646464;
+	/*line-height:28px;*/
+	text-align: left;
+    /* background-color: #E5E5E5;*/
+   
+}
+
+center .tongbo .company2{
+	width: 94%;
+	/*height: 160px;*/
+	margin: 0 auto;
+    overflow: hidden;
+    margin-top:10px;
+   padding: 10px 0;
+}
+
+center .tongbo .company2 .companytu{
+	width: 36%;
+	float: right;
+	margin: 0 auto;
+
+}
+center .tongbo .company2 .companytu img{
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	background-color: #E5E5E5;
+
+}
+center .tongbo .company2 .companyzi{
+	width: 60%;
+	float: left;
+	margin: 0 auto;
+	display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+
+}
+
+center .tongbo .company2 .companyzi p{
+	width: 100%;
+	font-family: "微软雅黑";
+/*	font-size: 16px;*/
+	color: #646464;
+/*	line-height:28px;*/
+	text-align: right;
+
+}
+
+
+.companyzi .p111{
+    width: 100%;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #646464;
+	line-height:28px;
+	text-align: left;
+    /* background-color: #E5E5E5;*/
+   
+}
+ .companyzi .p112{
+    width: 100%;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #646464;
+	line-height:20px;
+	text-align: left;
+    /* background-color: #E5E5E5;*/
+   
+}
+.companyzi .p113{
+    width: 100%;
+	font-family: "微软雅黑";
+	font-size: 10px;
+	color: #646464;
+	line-height:18px;
+	text-align: left;
+    /* background-color: #E5E5E5;*/
+   
+}
+center .tongbofirm .firm2{
+	text-indent: 28px;
+	font-size: 14px;
+	line-height:24px; 
+	/*margin: 0 auto;
+	margin-top:10px;
+	margin-left:30px;
+   font-family: "微软雅黑";
+	font-size: 16px;
+	color: #646464;
+	text-align: left;
+    line-height:28px; 
+}*/

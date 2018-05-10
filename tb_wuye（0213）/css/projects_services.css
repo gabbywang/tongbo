@@ -1,0 +1,117 @@
+@keyframes moveImg {
+    0%{
+        top: 80px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes moveTxt_top {
+    0%{
+        top: -80px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+@keyframes move_Map {
+    0%{
+        left: 120px;
+    }
+    100%{
+        left: 20px;
+    }
+}
+@keyframes move_Tel {
+    0%{
+        left: 150px;
+    }
+    100%{
+        left: 20px;
+    }
+}
+.side_child_list li a{
+    text-indent: 4em;
+}
+
+.property{
+    width: 100%;
+    height: 500px;
+    /*overflow: hidden;*/
+}
+.left{
+    float: left;
+    width: 442px;
+    height: 322px;
+    position: relative;
+}
+.left img{
+    padding: 10px;
+    margin-right: 0!important;
+    position: absolute;
+    top: 0px;
+    animation: moveImg 0.8s linear 1;
+}
+.right{
+    float: right;
+    width: 423px;
+    height: 322px;
+    position: relative;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.txt_txt{
+    position: absolute;
+    top: 0px;
+    animation: moveTxt_top 0.8s linear 1;
+    padding-top: 20px;
+}
+.txt_txt .txt_top{
+    font-size: 24px;
+    color: #333333;
+    line-height: 20px;
+    text-indent: 0em!important;
+    border-bottom: 5px solid #e40210;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+}
+.txt_txt .txt_bottom{
+    font-size: 16px;
+    color: #333333;
+    line-height: 26px;
+    height: 80px;
+    overflow: hidden;
+    display: block;
+}
+.info{
+    position: absolute;
+    width: 100%;
+    height: 48px;
+}
+.info_map{
+    top: 160px;
+    left: 20px;
+    animation: move_Map 0.8s linear 1;
+}
+.info .map,.info .tel{
+    float: left;
+    width: 48px;
+    height: 48px;
+    background: url("../images/busi_pos.png") center no-repeat;
+    border: 1px solid #dddddd;
+}
+.info .tel{
+    background-image: url("../images/busi_tel.png");
+}
+.info .map_txt,.info .tel_txt{
+    float: left;
+    font-size: 16px;
+    color: #333333;
+    line-height: 48px;
+    padding-left: 20px;
+}
+.info_tel{
+    top: 228px;
+    left: 20px;
+    animation: move_Tel 0.8s linear 1;
+}

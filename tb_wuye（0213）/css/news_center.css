@@ -1,0 +1,126 @@
+.news_txt{
+    margin-bottom: 40px;
+    border: 1px solid #dddddd;
+    padding: 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px #dddddd;
+}
+
+.news_txt .txt1{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+    text-indent: 0em;
+    cursor: pointer;
+}
+
+.news_txt .news_img .txt2{
+    margin-bottom: 0px;
+    float: left;
+    width: 658px;
+    height: 110px;
+    overflow: hidden;
+    line-height: 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.news_txt .news_img .news_img_right{
+    float: left;
+    margin-right: 0px;
+    margin-left: 23px;
+}
+.text-img{
+    margin-right: 0px!important;
+    width: 100%;
+    margin-bottom: 10px!important;
+    border-radius: 0px!important;
+    border: none!important;
+}
+
+
+
+
+.tb_periodical li{
+    padding: 24px 0;
+    cursor: pointer;
+
+}
+.tb_periodical li:hover{
+    background: #e1e1e1;
+}
+.tb_periodical li:last-child{
+    width: 100%;
+    height: 45px;
+    background: #e1e1e1;
+
+    padding: 0px 0px;
+    font-size: 20px;
+    line-height: 45px;
+    text-align: center;
+}
+.tb_periodical li:last-child a{
+    color: #999;
+}
+.tb_periodical li:last-child:hover{
+    background: #e40210;
+}
+.tb_periodical li:last-child:hover a{
+    color: #ffffff;
+}
+
+.tb_periodical li a{
+    display: block;
+}
+.tb_periodical_l{
+    width: 88px;
+    height: 90px;
+    background: #e1e1e1;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    line-height: 18px;
+    color: #333333;
+    font-weight: 900;
+    font-family: 'novecento'!important;
+    float: left;
+}
+.tb_periodical_l .day{
+    display: block;
+    font-size: 36px;
+    line-height: 36px;
+    padding: 5px 0px;
+    color: #e40210;
+}
+.tb_periodical_c{
+    float: left;
+    width: 686px;
+    height: 90px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.tb_periodical_c h1{
+    font-size: 20px;
+    color: #333;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.tb_periodical_c h2{
+    color: #666666;
+    font-weight: 400;
+}
+.tb_periodical_c p{
+    line-height: 24px;
+}
+.tb_periodical_r{
+    float: right;
+    width: 90px;
+    height: 88px;
+    background: url("../images/icon_pdf.png") center no-repeat;
+}
+.tb_periodical li:hover .tb_periodical_r{
+    background-image: url("../images/icon_pdf_on.png");
+}

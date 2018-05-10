@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" id="root" style="height: 100%">
+	<head>
+		
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <!-- 是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 这个主要是根据实际的页面设计的主体色为搭配来进行设置。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 忽略页面中的数字识别为电话号码,email识别 -->
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    
+		<title>查找设备</title>
+		
+		<link rel="stylesheet" href="css/globla.css" />
+		<link rel="stylesheet" href="css/service.css" />
+		<link rel="stylesheet" href="css/grouppurchase.css" />
+		
+		
+		
+		<script type="text/javascript">
+
+function showAndHidden2(){
+var zi=document.getElementById("zi");
+if(zi.style.visibility=='visible') zi.style.visibility='hidden';
+else zi.style.visibility='visible';
+} 
+</script> 
+		
+		
+		
+		
+	</head>
+	
+	
+	<body style="height: 100%">
+		<header>
+			 <div class="titel"><a href="faultewm.html"><img src="img/x.png" /></a>
+			                   <p>查找设备</p>
+			 </div>
+		</header> 
+		<center>
+		    
+
+		    <div class="faultsearchdetails" style="height: 100%">
+		    	
+		    	     
+		    	    <div class="searchkuang">设备类型&nbsp;&nbsp;<input></div>
+		    	    <div class="searchkuang">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址&nbsp;&nbsp;<input></div>
+		    	    
+		    	    <div class="qx" onclick="showAndHidden2();" ><a href="">立即查询</a></div>
+		    	    <div class="dizhik" id="zi" style="visibility:hidden;"><a href="faultsearch.html">坐便池  一号楼3楼女卫生间</a><br>
+		    	                        <a href="faultsearch.html">坐便池  一号楼3楼男卫生间</a></div> 
+		    	    
+		    	     
+		  
+		    	  
+
+		    	   
+		                         
+		    	</div>   
+		    
+		    
+		
+		<script>
+
+							
+       
+   
+  $("#gsxw").click(function(){
+	$("#media").addClass("hide");
+	$("#magazine").addClass("hide");
+    $("#company").removeClass("hide");
+    $("#company").addClass("show");
+	});
+  
+    $("#gsxw").click(function(){
+    	$("#media2").addClass("hide");
+	$("#magazine2").addClass("hide");
+    $("#company2").removeClass("hide");
+    $("#company2").addClass("show");
+	});
+  
+  
+  	$("#mtbd").click(function(){
+	$("#company").addClass("hide");
+	$("#magazine").addClass("hide");
+    $("#media").removeClass("hide");
+    $("#media").addClass("show");
+	});
+
+</script>    
+		    
+		    
+		    
+		</center>
+		<!--<footer>
+			<div class="bottom"><p>早餐餐单</p><div class="dian1"><img src="img/dian.png"></div>
+			                    <p>午餐餐单</p><div class="dian2"><img src="img/dian.png"></div>
+			                    <p>晚餐餐单</p>
+		    </div>
+	    </footer>-->
+	</body>
+</html>
+
+
+
+
+
